@@ -1,0 +1,19 @@
+# Render Blueprint — one free Node web service running the Next.js site (pages + /api/enquiry).
+# Render → New → Blueprint → connect GitHub → pick this repository → Deploy. See README.md → "Deploy on Render".
+services:
+  - type: web
+    name: exist-website
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NEXT_TELEMETRY_DISABLED
+        value: "1"
+# Contact form email: after the first deploy, open the service's Environment tab, add
+# NEXT_PUBLIC_WEB3FORMS_KEY (README → "Contact form email"), then "Save, rebuild, and deploy".

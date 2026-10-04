@@ -1,0 +1,5 @@
+{
+  "name": "EXiST — Excellence IT Solutions",
+  "description": "EXiST studio website: cinematic WebGL intro with live sound, projects, about (pricing), careers and a contact form. Next.js 16 + React 19 + TypeScript. Run: npm install, then npm run dev (port 3000). Keep the Next.js structure.",
+  "requestFramePermissions": []
+}
